@@ -72,7 +72,9 @@ export const LoginScreen = () => {
             onChangeText={(value) =>
               setState((prevState) => ({ ...prevState, password: value }))
             }
-          />
+          >
+            {/* <Text style={styles.btnPassword}>Показати</Text> */}
+          </TextInput>
           <TouchableOpacity
             activeOpacity={0.8}
             style={styles.btn}
