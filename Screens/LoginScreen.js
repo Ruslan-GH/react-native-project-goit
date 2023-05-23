@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 // import * as Font from "expo-font";
-// import { AppLoading } from "expo";
+// import AppLoading from "expo";
 
 const initialState = {
   email: "",
@@ -28,21 +28,21 @@ const initialState = {
 export const LoginScreen = () => {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
-  //   const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   const keyboardHide = () => {
     setIsShowKeyboard(false), Keyboard.dismiss(), setState(initialState);
   };
 
-  //   if (!isReady) {
-  //     return (
-  //       <AppLoading
-  //         startAsync={loadApplication}
-  //         onFinish={() => setIsReady(true)}
-  //         onError={console.warn}
-  //       />
-  //     );
-  //   }
+  // if (!isReady) {
+  //   return (
+  //     <AppLoading
+  //       startAsync={loadApplication}
+  //       onFinish={() => setIsReady(true)}
+  //       onError={console.warn}
+  //     />
+  //   );
+  // }
 
   return (
     <TouchableWithoutFeedback onPress={keyboardHide}>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     marginTop: 32,
     marginBottom: 32,
-    // fontFamily: "Roboto-Regular",
+    fontFamily: "Roboto-Regular",
   },
   btn: {
     justifyContent: "center",

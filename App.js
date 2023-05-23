@@ -1,20 +1,30 @@
 import React from "react";
-import { StyleSheet, View, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  View,
+  ImageBackground,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 
+// import testsElement from "./testsElement";
 // import { RegistrationScreen } from "./Screens/RegistrationScreen";
 import { LoginScreen } from "./Screens/LoginScreen";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground
-        source={require("./Images/photoBG.png")}
-        resizeMode="cover"
-        style={styles.image}
-      >
-        {/* <RegistrationScreen /> */}
-        <LoginScreen />
-      </ImageBackground>
-    </View>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <ImageBackground
+          source={require("./Images/photoBG.png")}
+          resizeMode="cover"
+          style={styles.image}
+        >
+          {/* <RegistrationScreen /> */}
+          <LoginScreen />
+          {/* <testsElement /> */}
+        </ImageBackground>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
